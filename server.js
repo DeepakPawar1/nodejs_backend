@@ -6,7 +6,7 @@ import Cards from './dbCards.js'
 //App config
 const app = express();
 const port = process.env.PORT || 8001
-const connection_url = "mongodb+srv://dpk9111996:tAZktFWZPIAnUbEG@cluster0.bkecu3w.mongodb.net/?retryWrites=true&w=majority"
+const connection_url = `mongodb+srv://dpk9111996:${process.env.db_pass}@cluster0.bkecu3w.mongodb.net/?retryWrites=true&w=majority`
 
 //Middleware
 app.use(express.json())
