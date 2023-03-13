@@ -26,16 +26,9 @@ console.log(data);
 res.send(data);
 })
 
-app.get("/dating/cards",(req,res)=>{
-Cards.find((err,data)=>{
-
-if(err){
-res.status(500).send(err)
-}
-else{ 
-res.status(200).send(data)
-}
-})
+app.get("/dating/cards",async (req,res)=>{
+const data = await Cards.find()
+res.send(data);
 })
 
 
